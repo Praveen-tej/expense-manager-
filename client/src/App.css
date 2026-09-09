@@ -1,0 +1,334 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #f8fafc
+  );
+
+  color: #1e293b;
+}
+
+
+/* =========================
+   EXPENSE FORM CARD
+   ========================= */
+
+.expese {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 40px auto 25px auto;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  box-shadow: 0px 10px 30px rgba(99, 102, 241, 0.12);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.expense-form {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.expense-form input,
+.expense-form select {
+  height: 45px;
+
+  padding: 0 14px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  color: #1e293b;
+
+  background-color: white;
+
+  outline: none;
+
+  box-sizing: border-box;
+}
+
+
+/* Amount */
+
+.expense-form input[name="amount"] {
+  width: 130px;
+}
+
+
+/* Category */
+
+.category-select {
+  width: 170px;
+}
+
+
+/* Description */
+
+.expense-form input[name="description"] {
+  width: 220px;
+}
+
+
+/* Date */
+
+.expense-form input[name="expense_date"] {
+  width: 170px;
+}
+
+
+/* =========================
+   INPUT FOCUS
+   ========================= */
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #6366f1;
+
+  box-shadow: 0px 0px 0px 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================
+   ADD / UPDATE BUTTON
+   ========================= */
+
+.expense-form button {
+  height: 45px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.expense-form button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0px 8px 18px rgba(99, 102, 241, 0.25);
+}
+
+
+/* =========================
+   TABLE CARD
+   ========================= */
+
+.table-card {
+  width: 90%;
+  max-width: 1100px;
+
+  margin: 0 auto 40px auto;
+
+  padding: 25px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  box-shadow: 0px 10px 30px rgba(99, 102, 241, 0.12);
+
+  box-sizing: border-box;
+
+  overflow-x: auto;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   TABLE HEADER
+   ========================= */
+
+.table thead {
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+}
+
+
+.table th {
+  padding: 14px 16px;
+
+  color: white;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   TABLE DATA
+   ========================= */
+
+.table td {
+  padding: 14px 16px;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  color: #1e293b;
+}
+
+
+/* =========================
+   ROW HOVER
+   ========================= */
+
+.table tbody tr:hover {
+  background-color: #f8f7ff;
+}
+
+
+/* =========================
+   EDIT / DELETE BUTTONS
+   ========================= */
+
+.table td button {
+  padding: 8px 14px;
+
+  margin-right: 8px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* EDIT */
+
+.table td button:first-child {
+  background-color: #eef2ff;
+
+  color: #4f46e5;
+}
+
+
+.table td button:first-child:hover {
+  background-color: #e0e7ff;
+}
+
+
+/* DELETE */
+
+.table td button:last-child {
+  background-color: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+.table td button:last-child:hover {
+  background-color: #fecaca;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .expese {
+    width: 94%;
+
+    padding: 20px;
+  }
+
+
+  .expense-form {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .expense-form input[name="amount"],
+  .expense-form input[name="description"],
+  .expense-form input[name="expense_date"],
+  .category-select {
+    width: 100%;
+  }
+
+
+  .expense-form button {
+    width: 100%;
+  }
+
+
+  .table-card {
+    width: 94%;
+
+    padding: 15px;
+  }
+
+
+  .table {
+    min-width: 750px;
+  }
+}
